@@ -1,15 +1,49 @@
- @server=https://chrissho97-shiny-space-pancake-vxj6pw6g7pghw659-8080.preview.app.github.dev
+ 
+ 
+ @dominio = https://chrissho97-musical-telegram-rj547w4rvv92pqj6-8080.preview.app.github.dev
 
 ###
 
-GET @{{server}}
+GET {{dominio}}/
 
 ###
 
-GET {{@server}}/cursos
+GET {{dominio}}/cursos
 
 ###
 
-POST {{@server}}/cursos
+# Crear Nuevo Registro 201 creado
+POST {{dominio}}/cursos
+Content-Type: application/json
+
+{"nombre": "Compiladores 2", "creditos": 5}
+
+###
+
+# Listar registros de un id
+GET {{dominio}}/cursos/1
+
+
+###
+#Editar un registro 204 editado
+
+PATCH {{dominio}}/cursos/1
+Content-Type: application/json
+
+{"nombre":"Algoritmos"}
+
+###
+# Muestra los id seleccionados
+GET  {{dominio}}/cursos?size=2&page=1&sort=creditos
+
+###
+
+#me permite acceder al fyBynombre darle el nombre
+
+GET {{dominio}}/cursos/search/findByNombre?nombre=Algoritmos
+
+
+
+
 
 
