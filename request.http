@@ -1,6 +1,6 @@
  
  
- @dominio = https://chrissho97-musical-telegram-rj547w4rvv92pqj6-8080.preview.app.github.dev
+ @dominio =https://chrissho97-crispy-garbanzo-5w7gv5g46462w47-8080.preview.app.github.dev
 
 ###
 
@@ -43,7 +43,25 @@ GET  {{dominio}}/cursos?size=2&page=1&sort=creditos
 GET {{dominio}}/cursos/search/findByNombre?nombre=Algoritmos
 
 
+###
 
+GET  {{dominio}}/carreras
 
+###
 
+POST {{dominio}}/carreras
+Content-Type: application/json
+
+{"nombre": "Marketing"}
+
+###
+
+GET  {{dominio}}/carreras/2/cursos
+
+###
+GET  {{dominio}}/carreras/1/cursos
+
+###
+
+GET  {{dominio}}/cursos/4/carrera
 
